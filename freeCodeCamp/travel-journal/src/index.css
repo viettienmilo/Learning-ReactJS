@@ -97,6 +97,7 @@ button:focus-visible {
 .entry {
   display: flex;
   margin: 20px;
+  margin-bottom: 36px;
 }
 
 .thumbnail-container {
@@ -133,6 +134,7 @@ button:focus-visible {
   font-size: 10px;
   margin-right: 8px;
   letter-spacing: 0.1rem;
+  text-transform: uppercase;
 }
 
 .lat-lon {
@@ -148,4 +150,5 @@ h2 {
 
 .description {
   color: #b6b6b6;
+  max-width: 380px;
 }
