@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import avatar from "../src/assets/user.png"
-import starFilled from "../src/assets/star-filled.png"
-import starEmpty from "../src/assets/star-empty.png"
+
 import './App.css'
+import Star from './Star.jsx';
 
 function App() {
   const [contact, setContact] = useState({
@@ -26,19 +26,9 @@ function App() {
           alt="User profile picture of John Doe"
         />
         <div className="info">
-          <button
-            onClick={toggleFavorite}
-            aria-pressed={contact.isFavorite}
-            aria-label={contact.isFavorite ? "Remove from favorite" : "Add to favorite"}
-            className="favorite-button"
-            type="button"
-          >
-            <img
-              src={contact.isFavorite ? starFilled : starEmpty}
-              alt={contact.isFavorite ? "filled star icon" : "empty star icon"}
-              className="favorite"
-            />
-          </button>
+
+          <Star isFilled={contact.isFavorite} handleClick={toggleFavorite} />
+
           <h2 className="name">
             {`${contact.firstName} ${contact.lastName}`}
           </h2>

@@ -1,12 +1,18 @@
+import { useState } from "react"
+
 export default function Jokes(props) {
-    const { setup, punchline, upvotes, downvotes, isPun } = props;
+    const { setup, punchline } = props;
+    const [isShown, setIsShown] = useState(false);
+
+    function toggleShown() {
+        setIsShown(prev => prev = !prev);
+    }
 
     return (
         <div style={{ textAlign: "left" }}>
-            <p>{`Setup: ${setup}`}</p>
-            <p>{`Punchline: ${punchline}`}</p>
-            <span>{`Upvotes: ${upvotes} - Downvotes: ${downvotes}`}</span><br />
-            <p>{`Pun: ${isPun ? "Yes" : "No"}`}</p>
+            {setup && <h3>{setup}</h3>}
+            {isShown && <p>{`Punchline: ${punchline}`}</p>}
+            <button type="button" onClick={toggleShown}>{isShown ? "Hide" : "Show"} punchline</button>
             <hr />
         </div>
     );
