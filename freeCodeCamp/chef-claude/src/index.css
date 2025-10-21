@@ -182,11 +182,10 @@ section ul li {
 }
 
 .suggested-recipe-container {
-  color: #9dbae6;
+  color: #afcfff;
   line-height: 28px;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 400;
-  max-width: 650px;
 }
 
 .suggested-recipe-container ul li,
