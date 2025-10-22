@@ -73,7 +73,7 @@ button:focus-visible {
 }
 
 
-/* custom */
+/*-- custom ------------ */
 main {
   width: 320px;
   height: 320px;
@@ -87,6 +87,15 @@ main {
 
 main button {
   width: 40%
+}
+
+main .counter-timer-container {
+  display: flex;
+  width: 100%;
+  color: rgb(46, 51, 72);
+  justify-content: space-evenly;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .title {
