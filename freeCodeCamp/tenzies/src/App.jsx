@@ -45,10 +45,9 @@ function App() {
   useEffect(() => {
     if (gameWon) {
       newGameRef.current.focus(); // set focus to button to play new game
-      clearInterval(intervalRef.current); // reset watchdog timer
+      // clearInterval(intervalRef.current); // reset watchdog timer
     }
     else {
-      clearInterval(intervalRef.current); // reset watchdog timer
       // start watchdog timer
       intervalRef.current = setInterval(() => setTime(prev => prev + 10), 10);
     }
