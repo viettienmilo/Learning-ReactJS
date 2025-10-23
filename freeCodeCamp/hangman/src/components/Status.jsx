@@ -1,8 +1,22 @@
-export default function Status() {
+export default function Status(props) {
+    const { isWon, isOver, farewellText } = props
+    let h1Text, pText;
+    if (isWon) {
+        h1Text = "You win!";
+        pText = "Well done! 🎉";
+    }
+    else if (isOver) {
+        h1Text = "Game Over!";
+        pText = "You lose! Better start learning Assembly 😭";
+    }
+    else if (farewellText) {
+        h1Text = "";
+        pText = farewellText;
+    }
     return (
-        <section className="game-status">
-            <h1>You win!</h1>
-            <p>Well done! 🎉</p>
-        </section>
+        <>
+            <h1>{h1Text}</h1>
+            <p>{pText}</p>
+        </>
     );
 }

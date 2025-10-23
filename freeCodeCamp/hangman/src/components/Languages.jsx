@@ -1,17 +1,9 @@
-import { languages } from './../languages.js';
-
-export default function Languages() {
+export default function Languages(props) {
+    const { name, backgroundColor, color } = props.language;
+    const classname = props.classname;
     return (
-        <section className="languages">
-            {languages.map(lang =>
-                <div
-                    key={lang.name}
-                    style={{
-                        backgroundColor: lang.backgroundColor,
-                        color: lang.color,
-                    }}>{lang.name}
-                </div>)}
-        </section>
+        <span style={{ backgroundColor: backgroundColor, color: color, }} className={classname}>
+            {name}
+        </span>
     );
-
 }
